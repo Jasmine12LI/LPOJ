@@ -63,6 +63,10 @@
               </el-col>
             </el-row>
           </el-row>
+          <el-row :gutter="18" id="addSample" style="left:10px">
+
+              <el-button type="primary" >添加测试用例</el-button>
+          </el-row>
 
           <el-row :gutter="18"
                   id="des">Source</el-row>
@@ -81,6 +85,10 @@
       </el-row>
       <el-row>
         <el-card shadow="always">
+          <el-button type="primary" @click="startAns">开始答题</el-button>
+        </el-card>
+        
+        <el-card shadow="always" v-if="startAnswer">
           <el-row :gutter="15">
             <el-col :span="3">
               <div id="des"
@@ -233,6 +241,7 @@ export default {
       imgcode: "",
       ip: "",
       userip: "",
+      startAnswer:false,
       cmOptions: {
         tabSize: 4,
         mode: "text/x-c++src",
@@ -424,6 +433,9 @@ export default {
     showdialog () {
       if (this.submitid != -1)
         this.$refs["Statusmini"].showdialog(this.submitid)
+    },
+    startAns (){
+        this.startAnswer=true
     },
     changetemplate (lang) {
       var t = this.codetemplate[lang]

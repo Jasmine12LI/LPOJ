@@ -3,7 +3,7 @@
     <el-dialog :visible.sync="dialogVisible">
       <el-row :gutter="10">
         <el-col :span="3">
-          <div style="text-align:center;margin:5px;">Leave a message</div>
+          <div style="text-align:center;margin:5px;">留言板</div>
         </el-col>
         <el-col :span="18">
           <el-input
@@ -14,18 +14,18 @@
           ></el-input>
         </el-col>
         <el-col :span="3">
-          <el-button size="mini" @click="addcomment" type="primary">Send</el-button>
+          <el-button size="mini" @click="addcomment" type="primary">发送</el-button>
         </el-col>
       </el-row>
     </el-dialog>
     <div slot="header">
-      <b>Suggestion Board</b>
-      <el-button size="mini" @click="dialogVisible = true" type="primary" style="float: right;">Send</el-button>
+      <b>留言板</b>
+      <el-button size="mini" @click="dialogVisible = true" type="primary" style="float: right;">发送</el-button>
     </div>
 
     <el-table :data="tableData" border style="width: 100%" size="mini" :row-style="ratingcolor">
-      <el-table-column prop="username" label="User"></el-table-column>
-      <el-table-column prop="msg" label="Message"></el-table-column>
+      <el-table-column prop="username" label="用户"></el-table-column>
+      <el-table-column prop="msg" label="留言"></el-table-column>
     </el-table>
     <el-pagination
       @size-change="handleSizeChange"

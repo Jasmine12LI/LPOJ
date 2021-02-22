@@ -1,7 +1,7 @@
 <template>
   <el-card>
     <div slot="header">
-      <b>Top User</b>
+      <b>王者用户</b>
     </div>
     <el-table
       :data="tableData"
@@ -12,8 +12,8 @@
       :row-style="ratingcolor"
     >
       <el-table-column type="index" width="40"></el-table-column>
-      <el-table-column prop="username" label="User"></el-table-column>
-      <el-table-column prop="rating" label="Score"></el-table-column>
+      <el-table-column prop="username" label="用户"></el-table-column>
+      <el-table-column prop="rating" label="分数"></el-table-column>
     </el-table>
   </el-card>
 </template>
