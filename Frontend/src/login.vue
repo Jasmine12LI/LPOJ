@@ -1,5 +1,5 @@
 <template>
-  <el-dialog title="登录" :visible.sync="dialogLoginVisible">
+  <el-dialog title="登录le" :visible.sync="dialogLoginVisible">
     <el-form :model="form" @keyup.native.enter="loginClick">
       <el-row :gutter="10">
         <el-col :span="3">
